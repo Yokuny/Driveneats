@@ -17,6 +17,28 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+}
+h4{
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+h5{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+p{
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
