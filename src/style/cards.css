@@ -22,6 +22,11 @@
 
     border: 1px solid rgba(128, 128, 128, 0.158);
     position: relative;
+    border: solid 3px transparent;
+    transition: all 100ms ease-in-out;
+}
+.snacks label:hover{
+    border: #32B72F solid 3px;
 }
 .card-info img{
     width: 144px;
@@ -38,10 +43,27 @@
 .card-info h5{
     line-height: 19px;
 }
-
 .snacks label input{
+    position: absolute;
+    right: 13px;
+    bottom: 14px;
     appearance: none;
     outline: none;
-
-
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.snacks label input::before {
+    content: "";
+    border-radius: 2px;
+    height: 55%;
+    width: 50%;
+    background-color: #32B72F;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+.snacks label input:checked:before {
+    opacity: 1;
 }
