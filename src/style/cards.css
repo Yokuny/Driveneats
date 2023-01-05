@@ -58,10 +58,10 @@
     justify-content: center;
 }
 .snacks label input::before {
+    border-radius: 50%;
     content: "";
-    border-radius: 2px;
-    height: 55%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     background-color: #32B72F;
     opacity: 0;
     transition: all 300ms ease-in-out;
