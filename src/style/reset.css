@@ -22,6 +22,10 @@ time, mark, audio, video {
     font-family: 'Righteous', cursive;
     font-weight: 400;
 }
+h2{
+	font-size: 26px;
+	color: #333333;
+}
 h4{
     font-family: Roboto, sans-serif;
     font-weight: 700;
