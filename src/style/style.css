@@ -2,6 +2,7 @@ body{
     display: grid;
     grid-template-columns: 1fr minmax(414px, 1fr) 1fr;
     grid-template-areas: ". content .";
+    background-color: #eeeeee;
 }/* header  */
 .grid{
     grid-area: content;
@@ -22,4 +23,7 @@ body{
 }
 .grid > header > p{
     font-size: 18px;
+}/* section titles  */
+.sectionTitle{
+    margin: 31px 19px 17px;
 }
