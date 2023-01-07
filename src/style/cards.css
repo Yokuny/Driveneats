@@ -1,5 +1,6 @@
 /* snackies card */
 .snacks{
+    margin-left: 19px;
     overflow: hidden;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -52,6 +53,18 @@
     line-height: 18px;
     color: #A6A6A6;
 }
-.card-info h5{
+.card-info > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-info div h5{
     line-height: 19px;
+}
+.card-info div img{
+    height: 16px;
+    width: 16px;
+}
+.cardCheckMark{
+    display: none;
 }
