@@ -1,4 +1,4 @@
-.snacks, .drinks{
+.snacks, .drinks, .desserts{
     padding: 0px 19px;
     box-sizing: border-box;
     overflow: hidden;
@@ -8,10 +8,10 @@
     display: flex;
     gap: 16px;
 }
-.snacks::-webkit-scrollbar{
+.snacks::-webkit-scrollbar, .snacks::-webkit-scrollbar, .desserts::-webkit-scrollbar{
     display: none;
 }/* revisitar isso /\  */
-.snacks > div{
+.snacks > div, .drinks > div, .desserts > div{
     width: 172px;
     height: 216px;
     border-radius: 9px;
@@ -27,16 +27,10 @@
     transition: all 100ms ease-in-out;
     border: solid 3px transparent;
 }
-.snacks > div:hover{
+.snacks > div:hover, .drinks > div:hover, .desserts > div:hover{
     border: #31b72f80 solid 3px;
 }
-.indicadorSnackCards{
-    border: #32B72F solid 3px !important;
-}
-.indicadorDrinkCards{
-    border: #32B72F solid 3px !important;
-}
-.indicadorSOBREMESA{
+.indicadorSnackCards, .indicadorDrinkCards, .indicadorDessertCards{
     border: #32B72F solid 3px !important;
 }
 .card-info img{

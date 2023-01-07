@@ -14,3 +14,10 @@ function drinkCard(elemento) {
   }
   elemento.classList.add("indicadorDrinkCards");
 }
+function dessertCard(elemento) {
+  const elementoEstilizado = document.querySelector(".indicadorDessertCards");
+  if (elementoEstilizado !== null) {
+    elementoEstilizado.classList.remove("indicadorDessertCards");
+  }
+  elemento.classList.add("indicadorDessertCards");
+}
