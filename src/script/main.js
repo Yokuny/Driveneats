@@ -1,5 +1,7 @@
 function snackCard(elemento) {
   const elementoEstilizado = document.querySelector(".indicadorSnackCards");
+  const checkIcon = document.getElementsByClassName("snacks");
+  console.log(checkIcon);
   if (elementoEstilizado !== null) {
     elementoEstilizado.classList.remove("indicadorSnackCards");
   }

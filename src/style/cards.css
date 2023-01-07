@@ -1,6 +1,6 @@
-/* snackies card */
-.snacks{
-    margin-left: 19px;
+.snacks, .drinks{
+    padding: 0px 19px;
+    box-sizing: border-box;
     overflow: hidden;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -44,6 +44,7 @@
     object-position: center;
     width: 144px;
     height: 87px;
+    border-radius: 4px;
 }
 .card-info h4{
     margin: 8px 0px;
