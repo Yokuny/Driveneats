@@ -1,10 +1,16 @@
 /* snackies card */
 .snacks{
-    overflow: scroll;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     display: flex;
     gap: 16px;
 }
-.snacks label{
+.snacks::-webkit-scrollbar{
+    display: none;
+}/* revisitar isso /\  */
+.snacks > div{
     width: 172px;
     height: 216px;
     border-radius: 9px;
@@ -20,7 +26,7 @@
     transition: all 100ms ease-in-out;
     border: solid 3px transparent;
 }
-.snacks label:hover{
+.snacks > div:hover{
     border: #31b72f80 solid 3px;
 }
 .indicadorSnackCards{
@@ -48,28 +54,4 @@
 }
 .card-info h5{
     line-height: 19px;
-}
-.snacks label input{
-    position: absolute;
-    right: 13px;
-    bottom: 14px;
-    appearance: none;
-    outline: none;
-    height: 16px;
-    width: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.snacks label input::before {
-    border-radius: 50%;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-color: #32B72F;
-    opacity: 0;
-    transition: all 300ms ease-in-out;
-}
-.snacks label input:checked:before {
-    opacity: 1;
 }
