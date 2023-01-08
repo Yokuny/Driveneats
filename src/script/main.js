@@ -1,39 +1,55 @@
-function removeCheckButton(theClass) {
-  const checkIcon = document.querySelector(theClass).childNodes;
-  for (let i = 0; i < checkIcon.length; i++) {
-    if (checkIcon[i].childNodes[1]) {
-      console.log(
+let snack, drink, dessert;
+
+const core = (() => {
+  const removeCheckButton = (theClass) => {
+    const checkIcon = document.querySelector(theClass).childNodes;
+    for (let i = 0; i < checkIcon.length; i++) {
+      if (checkIcon[i].childNodes[1]) {
         checkIcon[i].childNodes[1].childNodes[7].childNodes[3].classList.remove(
           "cardCheckMarkVisible"
-        )
-      );
+        );
+      }
     }
-  }
-}
-function indicadorCheck(elementClass) {
-  const elementoEstilizado = document.querySelector(`.${elementClass}`);
-  if (elementoEstilizado !== null) {
-    elementoEstilizado.classList.remove(elementClass);
-  }
-}
-function placeCheckButton(element) {
-  element.childNodes[1].childNodes[7].childNodes[3].classList.add("cardCheckMarkVisible");
-}
+  };
+
+  const indicadorCheck = (elementClass) => {
+    const elementoEstilizado = document.querySelector(`.${elementClass}`);
+    if (elementoEstilizado !== null) {
+      elementoEstilizado.classList.remove(elementClass);
+    }
+  };
+
+  const placeCheckButton = (element) => {
+    element.childNodes[1].childNodes[7].childNodes[3].classList.add("cardCheckMarkVisible");
+  };
+
+  const getElementData = (element) => {};
+
+  const checkAllData = () => {};
+  return { removeCheckButton, indicadorCheck, placeCheckButton, getElementData, checkAllData };
+})();
+
 function snackCard(elemento) {
-  removeCheckButton(".snacks");
-  indicadorCheck("indicadorSnackCards");
-  placeCheckButton(elemento);
+  core.removeCheckButton(".snacks");
+  core.indicadorCheck("indicadorSnackCards");
+  core.placeCheckButton(elemento);
+  snack = core.getElementData(elemento);
+  core.checkAllData();
   elemento.classList.add("indicadorSnackCards");
 }
 function drinkCard(elemento) {
-  removeCheckButton(".drinks");
-  placeCheckButton(elemento);
-  indicadorCheck("indicadorDrinkCards");
+  core.removeCheckButton(".drinks");
+  core.placeCheckButton(elemento);
+  core.indicadorCheck("indicadorDrinkCards");
+  drink = core.getElementData(elemento);
+  core.checkAllData();
   elemento.classList.add("indicadorDrinkCards");
 }
 function dessertCard(elemento) {
-  removeCheckButton(".desserts");
-  indicadorCheck("indicadorDessertCards");
-  placeCheckButton(elemento);
+  core.removeCheckButton(".desserts");
+  core.indicadorCheck("indicadorDessertCards");
+  core.placeCheckButton(elemento);
+  dessert = core.getElementData(elemento);
+  core.checkAllData();
   elemento.classList.add("indicadorDessertCards");
 }
