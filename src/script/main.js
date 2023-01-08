@@ -23,7 +23,12 @@ const core = (() => {
     element.childNodes[1].childNodes[7].childNodes[3].classList.add("cardCheckMarkVisible");
   };
 
-  const getElementData = (element) => {};
+  const getElementData = (element) => {
+    const escolha = element.childNodes[1].childNodes[3].textContent;
+    const valorEmReal = element.childNodes[1].childNodes[7].childNodes[1].textContent;
+    const valor = parseFloat(valorEmReal.slice(3));
+    return { escolha, valor };
+  };
 
   const checkAllData = () => {};
   return { removeCheckButton, indicadorCheck, placeCheckButton, getElementData, checkAllData };
