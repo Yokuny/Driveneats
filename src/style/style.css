@@ -5,9 +5,14 @@ body{
     background-color: #eeeeee;
 }/* header  */
 .grid{
+    margin: 92px 0px calc(92px + 16px);
+    /* revistitar para conferir o margin bottom */
     grid-area: content;
 }
 .grid > header{
+    position: fixed;
+    top: 0;
+    z-index: 2;
     height: 92px;
     box-sizing: border-box;
     padding: 0px 22px;
