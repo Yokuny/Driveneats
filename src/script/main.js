@@ -6,12 +6,9 @@ function indicadorCheck(elementClass) {
 }
 function removeCheckButton() {
   const checkIcon = document.getElementsByClassName("snacks");
-  console.log(checkIcon);
-  console.log(checkIcon[0].childNodes);
 }
 function placeCheckButton(element) {
-  console.log(element);
-  element.classList.add("cardCheckMark");
+  element.childNodes[1].childNodes[7].childNodes[3].classList.add("cardCheckMarkVisible");
 }
 function snackCard(elemento) {
   indicadorCheck("indicadorSnackCards");

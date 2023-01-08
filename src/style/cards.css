@@ -63,3 +63,6 @@
 .cardCheckMark{
     display: none;
 }
+.cardCheckMarkVisible{
+    display: initial;
+}
