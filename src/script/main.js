@@ -12,7 +12,7 @@ const core = (() => {
     }
   };
 
-  const indicadorCheck = (elementClass) => {
+  const checkBorder = (elementClass) => {
     const elementoEstilizado = document.querySelector(`.${elementClass}`);
     if (elementoEstilizado !== null) {
       elementoEstilizado.classList.remove(elementClass);
@@ -30,31 +30,54 @@ const core = (() => {
     return { escolha, valor };
   };
 
-  const checkAllData = () => {};
-  return { removeCheckButton, indicadorCheck, placeCheckButton, getElementData, checkAllData };
+  const checkAllData = () => {
+    if (snack && drink && dessert) {
+      return true;
+    }
+    return false;
+  };
+  const buttonActivation = () => {
+    const submitButton = document.getElementById("submitButton");
+    submitButton.textContent = "Fechar pedido";
+    submitButton.classList.add("activedButton");
+  };
+  return {
+    removeCheckButton,
+    checkBorder,
+    placeCheckButton,
+    getElementData,
+    checkAllData,
+    buttonActivation,
+  };
 })();
 
 function snackCard(elemento) {
   core.removeCheckButton(".snacks");
-  core.indicadorCheck("indicadorSnackCards");
+  core.checkBorder("indicadorSnackCards");
   core.placeCheckButton(elemento);
   snack = core.getElementData(elemento);
-  core.checkAllData();
+  if (core.checkAllData()) {
+    core.buttonActivation();
+  }
   elemento.classList.add("indicadorSnackCards");
 }
 function drinkCard(elemento) {
   core.removeCheckButton(".drinks");
   core.placeCheckButton(elemento);
-  core.indicadorCheck("indicadorDrinkCards");
+  core.checkBorder("indicadorDrinkCards");
   drink = core.getElementData(elemento);
-  core.checkAllData();
+  if (core.checkAllData()) {
+    core.buttonActivation();
+  }
   elemento.classList.add("indicadorDrinkCards");
 }
 function dessertCard(elemento) {
   core.removeCheckButton(".desserts");
-  core.indicadorCheck("indicadorDessertCards");
+  core.checkBorder("indicadorDessertCards");
   core.placeCheckButton(elemento);
   dessert = core.getElementData(elemento);
-  core.checkAllData();
+  if (core.checkAllData()) {
+    core.buttonActivation();
+  }
   elemento.classList.add("indicadorDessertCards");
 }

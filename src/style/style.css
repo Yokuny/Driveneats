@@ -46,7 +46,7 @@ footer{
 footer button{
     width: 364px;
     height: 61px;
-    background: #CBCBCB;
+    background-color: #CBCBCB;
     border-radius: 50px;
     border: transparent;
     box-sizing: border-box;
@@ -60,7 +60,13 @@ footer button{
     letter-spacing: 0.018em;
     color: #FFFFFF;
     cursor: not-allowed;
-}/* to desktop */
+}/* class actived class */
+.activedButton{
+    background-color: #32B72F;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+/* to desktop */
 /* @media (max-width: 414px){
     body{
         display: flex;
