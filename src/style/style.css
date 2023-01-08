@@ -59,8 +59,8 @@ footer button{
     text-align: center;
     letter-spacing: 0.018em;
     color: #FFFFFF;
-}/* to mobile */
-@media (min-width: 414px){
+}/* to desktop */
+/* @media (max-width: 414px){
     body{
         display: flex;
     }
@@ -70,4 +70,4 @@ footer button{
     footer{
         width: 100%;
     }
-}
+} */

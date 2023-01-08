@@ -1,9 +1,3 @@
-function indicadorCheck(elementClass) {
-  const elementoEstilizado = document.querySelector(`.${elementClass}`);
-  if (elementoEstilizado !== null) {
-    elementoEstilizado.classList.remove(elementClass);
-  }
-}
 function removeCheckButton(theClass) {
   const checkIcon = document.querySelector(theClass).childNodes;
   for (let i = 0; i < checkIcon.length; i++) {
@@ -14,6 +8,12 @@ function removeCheckButton(theClass) {
         )
       );
     }
+  }
+}
+function indicadorCheck(elementClass) {
+  const elementoEstilizado = document.querySelector(`.${elementClass}`);
+  if (elementoEstilizado !== null) {
+    elementoEstilizado.classList.remove(elementClass);
   }
 }
 function placeCheckButton(element) {

@@ -26,6 +26,7 @@
     position: relative;
     transition: all 100ms ease-in-out;
     border: solid 3px transparent;
+    cursor: pointer;
 }
 .snacks > div:hover, .drinks > div:hover, .desserts > div:hover{
     border: #31b72f80 solid 3px;
