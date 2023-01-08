@@ -4,17 +4,28 @@ function indicadorCheck(elementClass) {
     elementoEstilizado.classList.remove(elementClass);
   }
 }
-function snackCard(elemento) {
-  indicadorCheck("indicadorSnackCards");
+function removeCheckButton() {
   const checkIcon = document.getElementsByClassName("snacks");
   console.log(checkIcon);
+  console.log(checkIcon[0].childNodes);
+}
+function placeCheckButton(element) {
+  console.log(element);
+  element.classList.add("cardCheckMark");
+}
+function snackCard(elemento) {
+  indicadorCheck("indicadorSnackCards");
+  removeCheckButton();
+  placeCheckButton(elemento);
   elemento.classList.add("indicadorSnackCards");
 }
 function drinkCard(elemento) {
   indicadorCheck("indicadorDrinkCards");
+  placeCheckButton(elemento);
   elemento.classList.add("indicadorDrinkCards");
 }
 function dessertCard(elemento) {
   indicadorCheck("indicadorDessertCards");
+  placeCheckButton(elemento);
   elemento.classList.add("indicadorDessertCards");
 }
