@@ -1,0 +1,38 @@
+.reviewCard{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffffe6;
+}
+.reviewCard > div{
+    width: 377px;
+    height: 353px;
+    box-sizing: border-box;
+    padding: 21px 25px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 13px;
+}
+.reviewCard > div > h4{
+    font-size: 22px;
+    margin-bottom: 28px;
+}
+#aboutSnacks, #aboutDrink, #aboutDessert, #totalPrice{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#aboutSnacks h5, #aboutDrink h5, #aboutDessert h5, #totalPrice h4{
+    font-size: 22px;
+    letter-spacing: 0.02em;
+}/* buttons */
