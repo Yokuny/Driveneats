@@ -46,6 +46,10 @@ const core = (() => {
     }
     element.classList.add(elementClass);
   }
+  function aaa() {
+    console.log("aol");
+  }
+
   const submiteOrder = () => {
     if (checkAllData()) {
       valor = snack.valor + drink.valor + dessert.valor;
@@ -56,6 +60,26 @@ const core = (() => {
       - Bebida: ${drink.escolha}
       - Sobremesa: ${dessert.escolha}
       Total: R$ ${snack.valor + drink.valor + dessert.valor}`;
+
+      const aboutSnacks = document.getElementById("aboutSnacks");
+      aboutSnacks.childNodes[1].textContent = snack.escolha;
+      aboutSnacks.childNodes[3].textContent = `R$ ${snack.valor}`;
+
+      const aboutDrink = document.getElementById("aboutDrink");
+      aboutDrink.childNodes[1].textContent = drink.escolha;
+      aboutDrink.childNodes[3].textContent = `R$ ${drink.valor}`;
+
+      const aboutDessert = document.getElementById("aboutDessert");
+      aboutDessert.childNodes[1].textContent = dessert.escolha;
+      aboutDessert.childNodes[3].textContent = `R$ ${dessert.valor}`;
+
+      const totalPrice = document.getElementById("totalPrice");
+      totalPrice.childNodes[3].textContent = `R$ ${valor.toFixed(2)}`;
+
+      const reviewOrder = document.getElementById("reviewCard");
+      console.log(reviewOrder);
+
+      reviewOrder.style.display = "flex";
     }
   };
   return {

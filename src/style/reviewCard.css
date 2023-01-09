@@ -1,4 +1,4 @@
-.reviewCard{
+#reviewCard{
     position: fixed;
     z-index: 10;
     display: flex;
@@ -8,7 +8,7 @@
     height: 100%;
     background: #ffffffe6;
 }
-.reviewCard > div{
+#reviewCard > div{
     width: 377px;
     height: 353px;
     box-sizing: border-box;
@@ -23,7 +23,7 @@
     color: white;
     gap: 13px;
 }
-.reviewCard > div > h4{
+#reviewCard > div > h4{
     font-size: 22px;
     margin-bottom: 28px;
 }
@@ -36,3 +36,29 @@
     font-size: 22px;
     letter-spacing: 0.02em;
 }/* buttons */
+#submitOrder{
+    width: 329px;
+    height: 52px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    border: transparent;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #50D074;
+    cursor: pointer;
+}
+#cancelOrder{
+    width: 333px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
