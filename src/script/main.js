@@ -78,14 +78,13 @@ const core = (() => {
   const submitOrder = () => {
     const total = getOrderPrice();
     const userNameAndAdress = getNameAndAdress();
-    let msg = `Olá, gostaria de fazer o pedido:\n- Prato: ${snack.escolha}\n- Bebida: ${drink.escolha}\n- Sobremesa: ${dessert.escolha}\nTotal: R$ ${total}\n\nNome: ${userNameAndAdress.userName}\nEndereço: ${userNameAndAdress.userAdress}`;
+    const msg = `Olá, gostaria de fazer o pedido:\n- Prato: ${snack.escolha}\n- Bebida: ${drink.escolha}\n- Sobremesa: ${dessert.escolha}\nTotal: R$ ${total}\n\nNome: ${userNameAndAdress.userName}\nEndereço: ${userNameAndAdress.userAdress}`;
     window.location.href = `https://wa.me/5528999848929?text=${encodeURIComponent(msg)}`;
   };
   const cancelOrder = () => {
     const reviewOrder = document.getElementById("reviewCard");
     reviewOrder.style.display = "none";
   };
-
   return {
     getElementData,
     run,
