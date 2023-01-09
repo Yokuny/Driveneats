@@ -67,7 +67,7 @@ footer button{
     cursor: pointer;
 }
 /* to desktop */
-/* @media (max-width: 414px){
+@media (min-width: 414px){
     body{
         display: flex;
     }
@@ -77,4 +77,4 @@ footer button{
     footer{
         width: 100%;
     }
-} */
+}
