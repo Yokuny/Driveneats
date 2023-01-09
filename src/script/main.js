@@ -1,4 +1,7 @@
 let snack, drink, dessert;
+const submitButton = document.getElementById("submitButton");
+const cancelButton = document.getElementById("cancelOrder");
+
 const core = (() => {
   function removeCheckButton(theClass) {
     const checkIcon = document.querySelector(theClass).childNodes;
@@ -77,17 +80,22 @@ const core = (() => {
       totalPrice.childNodes[3].textContent = `R$ ${valor.toFixed(2)}`;
 
       const reviewOrder = document.getElementById("reviewCard");
-      console.log(reviewOrder);
-
       reviewOrder.style.display = "flex";
     }
+  };
+
+  const cancelOrder = () => {
+    const reviewOrder = document.getElementById("reviewCard");
+    reviewOrder.style.display = "none";
   };
   return {
     submiteOrder,
     getElementData,
     run,
+    cancelOrder,
   };
 })();
+
 function snackCard(elemento) {
   snack = core.getElementData(elemento);
   core.run(".snacks", "indicadorSnackCards", elemento);
@@ -100,5 +108,6 @@ function dessertCard(elemento) {
   dessert = core.getElementData(elemento);
   core.run(".desserts", "indicadorDessertCards", elemento);
 }
-const submitButton = document.getElementById("submitButton");
+
 submitButton.addEventListener("click", core.submiteOrder);
+cancelButton.addEventListener("click", core.cancelOrder);

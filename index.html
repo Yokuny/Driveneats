@@ -233,7 +233,7 @@
     </div>
     <!-- order review -->
     <div style="display: none;" id="reviewCard">
-        <div>
+        <div data-test="confirm-order-modal">
             <h4>Confirme seu pedido</h4>
             <div id="aboutSnacks">
                 <h5>-</h5>
@@ -251,8 +251,8 @@
                 <h4>TOTAL</h4>
                 <h4>-</h4>
             </div>
-            <button id="submitOrder"></iframe>Tudo certo, pode pedir!</button>
-            <button id="cancelOrder">Cancelar</button>
+            <button data-test="confirm-order-btn" id="submitOrder"></iframe>Tudo certo, pode pedir!</button>
+            <button data-test="cancel-order-btn" id="cancelOrder">Cancelar</button>
         </div>
     </div>
 </body>
