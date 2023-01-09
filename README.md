@@ -1,4 +1,4 @@
-# **Projeto Driven Eats**
+# **Projeto [Driven Eats](https://yokuny.github.io/projeto3-driveneats/)**
 
 > O site permite de forma fácil a escolha sua refeição, e envia-la em seguida o pedido por WhatsApp diretamente para o restaurante.
 > 
@@ -6,6 +6,8 @@
 Esse projeto foi desenvolvido para funcionar perfeitamente em todos os dispositivos moveis.
 
 Cada passo do desenvolvimento do projeto foi `versionada` no `GitHub`. Vocês podem acompanhar o processo nos `commits` no [repositório do projeto](https://github.com/Yokuny/projeto3-driveneats).
+
+[O projeto pode ser acessado online aqui <](https://yokuny.github.io/projeto3-driveneats/)
 
 ## Este projeto é sobre
 
